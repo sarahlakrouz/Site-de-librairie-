@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - L'arbre à livres</title>
+    <link rel="stylesheet" href="style.css"> <!-- Si vous avez un fichier CSS externe -->
+    <style>
+        /* Ajoutez ici vos styles CSS si nécessaire */
+        body {
+            margin: 0; /* Supprime les marges par défaut */
+            font-family: Arial, sans-serif; /* Police de caractère */
+            background-color: #D3C8B0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #D3C8B0; /* Couleur de fond pour distinguer l'en-tête */
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            font-size: 16px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: none; /* Supprime la bordure */
+            margin-right: 10px; /* Espacement entre l'input et le bouton */
+            border-radius: 10px; /* Bords arrondis pour l'input */
+            outline: none; /* Supprime le contour au focus */
+        }
+        .search-container button {
+            padding: 5px 10px;
+            border: none; /* Supprime la bordure */
+            border-radius: 10px; /* Bords arrondis pour le bouton */
+            cursor: pointer; /* Change le curseur */
+            color: white; /* Couleur du texte */
+        }
+        .login-logo img, .cart-logo img {
+           
+            object-fit: contain; /* Assure que l'image s'adapte correctement sans être déformée */
+        }
+
+        .navbar {
+            background-color : #16786A;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            margin-top: 10px; /* Espace entre l'en-tête et la barre de navigation */
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #titre{
+            color:#16786A;
+            font-family: "Yuji Syuku", serif;
+            font-weight: 600;
+            font-style: normal;
+            padding-left: 2%;
+            font-size: 32px;
+        }
+        .faq-section {
+            margin-bottom: 20px;
+        }
+        #about-us{
+            display: flex;
+            padding: 20px;
+           gap: 40px;
+            
+        }
+        #about-us .about-us-content {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 40px; /* Espacement entre l'image et le texte */
+    
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.about-us-img {
+    width: 300px; /* ou la taille que vous préférez */
+    height: auto; /* pour conserver les proportions */
+    border-radius: 10px; /* Pour arrondir les coins de l'image si souhaité*/
+}
+#about-us .text-container {
+    color: white;
+    font-weight: 300;
+   
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #16786A;
+    padding: 20px;
+    background-color:#D3C8B0; /* Ou toute autre couleur de fond désirée */
+    /* Permet au conteneur de texte de prendre l'espace restant */
+}
+        h2 {
+            color: #16786A;
+        }
+        h3 {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .faq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alignement vertical des éléments à gauche */
+    text-align: left; /* Garde le titre aligné à gauche */
+}
+.faq h2{
+    margin-left: 2%;
+}
+.faq-text {
+    color: white;
+    font-weight: 300;
+    align-self: flex-end; /* Alignement horizontal du texte à droite */
+    text-align: right; /* Assure que le texte lui-même est aligné à droite */
+    width: 100%; /* Permet au texte de prendre toute la largeur disponible */
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center; /* Centre le titre horizontalement */
+    font-family: 'Segoe UI', sans-serif; /* Assure la cohérence de la police avec les autres titres */
+    color: #16786A; /* Utilise la même couleur que les autres titres */
+    font-size: 24px; /* Exemple de taille de police, ajustez selon vos préférences */
+    margin-top: 20px; /* Ajoute un peu d'espace au-dessus du titre */
+    margin-bottom: 20px; /* Ajoute un peu d'espace en dessous du titre */
+}
+
+#order-delivery .order-delivery-content {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement si leur hauteur diffère */
+    justify-content: space-between; /* Espacement entre le texte et l'image */
+    gap: 20px; /* Espacement supplémentaire si nécessaire */
+}
+
+#order-delivery .order-delivery-content > div {
+    flex-grow: 1; /* Permet au texte d'occuper l'espace nécessaire */
+}
+.order-delivery-content p{
+    color: white;
+    font-weight: 500;
+    padding-left: 50px;
+}
+
+.delivery-img {
+    padding-right: 50px;
+    max-width: 20%; /* Ajustez selon la taille souhaitée pour l'image */
+    height: auto; /* Maintient les proportions de l'image */
+    border-radius: 10px; /* Si vous souhaitez arrondir les coins */
+}
+
+.commande{
+    text-align: center;
+}
+#order-delivery h3{
+color: white;
+text-align: center;
+}
+.order-delivery-content{
+    margin-left: 10px;
+}
+.order-delivery-content p{
+    text-align: center;
+    font-weight: 400;
+    border: solid #16786A 2px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+footer {
+            background-color: #16786A; /* Couleur de fond */
+            color: #fff; /* Couleur du texte */
+            padding: 5px; /* Espacement intérieur */
+            text-align: center; /* Alignement du texte au centre */
+            position: relative; /* Position fixe en bas */
+            bottom: 0; /* Alignement en bas de la page */
+            width: 100%; /* Pleine largeur */
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titre">L'arbre à livres</h1>
+        <form method="POST" action="recherche.php">
+            <div class="search-container">
+                <input type="text" name="search" placeholder="Quel livre cherchez-vous ?">
+                <button type="submit" style ="background-color: transparent;">
+                    <img src="symbole-de-linterface-de-recherche.png" alt="Rechercher" style="width: 24px; height: 24px;">
+                </button>
+        </div>
+        </form>
+       
+        <div style="display:flex; flex-direction: row; padding:12px;">
+            <a href="espaces.html" class="login-logo" target="_blank"> <img src="compte.png" alt="Connexion/Inscription" style="margin-right: 10px;" > </a>
+            
+            <img src="panier.png" alt="Panier">
+            
+        </div>
+    </header>
+    
+    <div class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="cat.php">Catalogue</a>
+        <a href="box.html"> Box de livres </a>
+    </div>
+
+
+<div class="container">
+    <h1>Bienvenue dans notre FAQ !</h1>
+    <div class="faq">
+        <h2> | Questions fréquemment posées</h2>
+       <div class="faq-text"><p> Vous avez une question ? Nous sommes là pour y répondre !<br>N'hésitez pas à nous contacter si vous ne trouvez pas votre réponse.</p></div>
+    </div>
+    <!-- Section À propos de nous -->
+  
+        
+    </div>
+    <div class="faq-section" id="about-us">
+        <img src="ecriture.jpg" alt="À propos de nous" class="about-us-img">
+        <div class="text-container">
+            <h2>Qui sommes-nous ?</h2>
+        <p>Nous sommes Sarah et Rim, deux étudiantes en mathématiques et informatique et pour autant passionnées par la littérature et dédiées à apporter les meilleurs livres directement à votre porte. Que vous soyez un amateur avide des derniers best-sellers ou un connaisseur recherchant des trésors littéraires oubliés, nous sommes là pour vous. Notre engagement envers vous va au-delà de la simple livraison de livres ; nous nous efforçons de vous offrir une expérience de lecture personnalisée, adaptée à vos goûts et à vos intérêts.
+
+            Parcourez notre sélection soigneusement choisie et laissez-vous emporter par les mondes fantastiques, les intrigues captivantes et les personnages inoubliables que nous avons sélectionnés pour vous. Avec nous, chaque livre est plus qu'une simple histoire ; c'est un voyage à part entière, et nous sommes ravis de vous accompagner à chaque étape du chemin.
+        </p>
+    </div>
+       
+    </div>
+
+    <!-- Section Commande et Livraison -->
+    <div class="faq-section" id="order-delivery">
+        <div class="commande">
+        <h2>Commande et Livraison</h2>
+    </div>
+        
+    <h3>Comment passer commande ?</h3>
+        <div class="order-delivery-content"> <!-- Conteneur Flex pour le texte et l'image -->
+              <p>Pour passer commande, c'est aussi simple que de feuilleter les pages d'un livre. Notre bibliothèque en ligne regorge de trésors littéraires qui n'attendent que d'être découverts. Explorez notre vaste collection, allant des best-sellers les plus récents aux joyaux de la littérature classique. Ajoutez les livres qui captivent votre imagination au panier et suivez les instructions de paiement pour compléter votre achat en toute sécurité. <br>Nous comprenons que trouver le livre parfait peut parfois être une aventure en soi. C'est pourquoi notre fonction de recherche avancée vous permet de filtrer les résultats par genre, auteur, année de publication et bien plus encore, pour vous aider à trouver exactement ce que vous cherchez.<br> Notre interface conviviale garantit une expérience de commande fluide, même pour les utilisateurs novices.</p>
+        <img  src="pile_de_livres.jpg" alt="pile de livres" class="delivery-img">
+    </div>
+        
+        <h3>Quels sont les délais de livraison ?</h3>
+        <div class="order-delivery-content">
+        <img src="livraison_livre.jpg" class="delivery-img">
+        <p>Nous comprenons que la patience est une vertu rare, surtout lorsqu'il s'agit de livres tant attendus. Nos délais de livraison sont rapides et fiables. En général, vous pouvez vous attendre à recevoir votre commande entre 2 et 5 jours ouvrés, selon votre emplacement. De plus, nous offrons des options d'expédition express pour ceux qui ont besoin de leurs livres encore plus rapidement.</p>
+    </div>
+    </div>
+
+    <!-- Section Retours et Remboursements -->
+       <div class="faq-section" id="order-delivery">
+        <div class="commande">
+        <h2>Retours et Remboursements</h2>
+    </div>
+        <h3>Quelle est votre politique de retour et comment obtenir un remboursement ?</h3>
+        <div class="order-delivery-content"> <!-- Conteneur Flex pour le texte et l'image -->
+        <p>Nous comprenons que parfois, même les meilleurs livres peuvent ne pas répondre à vos attentes. C'est pourquoi nous offrons une politique de retour généreuse. Si pour une raison quelconque vous n'êtes pas entièrement satisfait de votre achat, vous pouvez retourner les produits dans les 30 jours suivant l'achat, à condition qu'ils soient en état neuf et non endommagés. Nous croyons en la qualité de nos livres, c'est pourquoi nous vous offrons cette garantie sans poser de questions.Demandez un remboursement est aussi simple que de tourner une page. Si vous avez besoin de retourner un article et de demander un remboursement, veuillez nous contacter en fournissant votre numéro de commande ainsi que les détails de l'article que vous souhaitez retourner. Notre équipe de service clientèle dévouée sera là pour vous guider à chaque étape du processus, assurant une résolution rapide et sans tracas.</p>
+        <img src="retour_livre.jpg" class="delivery-img">
+    </div>
+    </div>
+
+</div>
+<footer>
+    <p>&copy; 2024 L'arbre à livres. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

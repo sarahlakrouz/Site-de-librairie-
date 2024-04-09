@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Espaces</title>
+        <style>
+             body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background-color: #b3a791;
+            font-family: "Yanone Kaffeesatz", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-style: normal;
+        }
+
+       
+        h2{
+            color:white;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 60%;
+            padding: 60px;
+            color:white;
+        }
+
+        .square {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .square a {
+            text-decoration: none; /* Supprimer le soulignage */
+            color: inherit; /* Utiliser la couleur par défaut du texte */
+        }
+        </style>
+    </head>
+    <body>
+        <h2> Choisissez votre espace : </h2>
+        <div class="container">
+            
+            <div class="square"> <a href ="authentification.php"> Espace administrateur </a></div>
+            <div class="square"> <a href="connexion.php"> Espace client </a></div>
+        </div>
+    </body>
+</html>

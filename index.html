@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librairie en ligne</title>
+    <style>
+        /* Style de base pour la mise en forme */
+        body {
+            margin: 0; /* Supprime les marges par défaut */
+            font-family: Arial, sans-serif; /* Police de caractère */
+            background-color: #D3C8B0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #D3C8B0; /* Couleur de fond pour distinguer l'en-tête */
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            font-size: 16px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: none; /* Supprime la bordure */
+            margin-right: 10px; /* Espacement entre l'input et le bouton */
+            border-radius: 10px; /* Bords arrondis pour l'input */
+            outline: none; /* Supprime le contour au focus */
+        }
+        .search-container button {
+            padding: 5px 10px;
+            border: none; /* Supprime la bordure */
+            border-radius: 10px; /* Bords arrondis pour le bouton */
+            cursor: pointer; /* Change le curseur */
+            color: white; /* Couleur du texte */
+        }
+        .login-logo img, .cart-logo img {
+           
+            object-fit: contain; /* Assure que l'image s'adapte correctement sans être déformée */
+        }
+
+        .navbar {
+            background-color : #16786A;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            margin-top: 10px; /* Espace entre l'en-tête et la barre de navigation */
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #titre{
+            color:#16786A;
+            font-family: "Yuji Syuku", serif;
+            font-weight: 600;
+            font-style: normal;
+            padding-left: 2%;
+        }
+        .container {
+        width: 90%;
+        margin: 50px auto;
+        }
+
+.welcome-text {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: justify;
+    width:100%;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-style: normal;
+    color:white;
+}
+        .book-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+        #livres h2{
+            font-family: "Yanone Kaffeesatz", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-style: normal;
+        }
+        .book {
+        width: 200px; /* Changer cette valeur selon vos besoins */
+        height: auto; /* Pour conserver le ratio de l'image */
+        }
+
+        .book:last-child {
+            margin-right: 0;
+        }
+
+        .book-info {
+            text-align: center;
+            font-weight: 300;
+            font-family: "Yanone Kaffeesatz", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-style: normal;
+        }
+        .pied-page {
+            background-color: #16786A; /* Couleur de fond */
+            color: #fff; /* Couleur du texte */
+            padding: 5px; /* Espacement intérieur */
+            text-align: center; /* Alignement du texte au centre */
+            position: relative; /* Position fixe en bas */
+            bottom: 0; /* Alignement en bas de la page */
+            width: 100%; /* Pleine largeur */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titre">L'arbre à livres</h1>
+        <form method="POST" action="recherche.php">
+            <div class="search-container">
+                <input type="text" name="search" placeholder="Quel livre cherchez-vous ?">
+                <button type="submit" style ="background-color: transparent;">
+                    <img src="symbole-de-linterface-de-recherche.png" alt="Rechercher" style="width: 24px; height: 24px;">
+                </button>
+        </div>
+        </form>
+        <div style="display:flex; flex-direction: row; padding:12px;">
+            <a href="espaces.html" class="login-logo" target="_blank"> <img src="compte.png" alt="Connexion/Inscription" style="margin-right: 10px;" > </a>
+                
+            <img src="panier.png" alt="Panier">
+            
+        </div>
+    </header>
+    
+    <div class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="cat.php">Catalogue</a>
+        <a href="box.html"> Box de livres </a>
+    </div>
+
+    <div class="container">
+        <div class ="welcome-text">
+            <p>
+                Bienvenue sur notre plateforme dédiée aux amoureux de la littérature et de la culture ! 
+                Ici, nous célébrons le pouvoir des mots, des récits captivants, et de l'émerveillement que seul un bon livre peut susciter.
+                <br> <br>
+                 Que vous soyez un lecteur passionné à la recherche de votre prochaine obsession littéraire, ou un novice 
+                 curieux désireux d'explorer le monde merveilleux des livres, nous sommes ravis de vous accueillir dans 
+                 notre communauté. Préparez-vous à plonger dans des univers fascinants, à rencontrer des personnages 
+                 inoubliables, et à découvrir le pouvoir infini des mots. Bienvenue à bord, et que votre voyage littéraire
+                  commence !
+            </p>
+        </div>
+        <div style="text-align: center;">
+            <video autoplay loop muted width="auto" height="550px">
+                <source src="video2.mp4">
+            </video>
+        </div>
+        </div>
+        
+   
+</body>
+<div class="pied-page">
+<footer>
+    <p>&copy; 2024 L'arbre à livres. Tous droits réservés.</p>
+</footer>
+</div>
+</html>
